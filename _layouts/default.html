@@ -15,6 +15,7 @@
     {% assign sticky_posts = site.posts | where: "sticky", true %}
     {% assign regular_posts = site.posts | where: "sticky", false %}
 
+    <!-- Display sticky posts -->
     {% for post in sticky_posts %}
       <article>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -22,6 +23,7 @@
       </article>
     {% endfor %}
 
+    <!-- Display regular posts -->
     {% for post in regular_posts %}
       <article>
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
@@ -37,3 +39,4 @@
 </body>
 
 </html>
+  
