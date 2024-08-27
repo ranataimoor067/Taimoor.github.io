@@ -12,31 +12,13 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    {% assign sticky_posts = site.posts | where: "sticky", true %}
-    {% assign regular_posts = site.posts | where: "sticky", false %}
-
-    <!-- Display sticky posts -->
-    {% for post in sticky_posts %}
-      <article>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-      </article>
-    {% endfor %}
-
-    <!-- Display regular posts -->
-    {% for post in regular_posts %}
-      <article>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt }}</p>
-      </article>
-    {% endfor %}
-  </main>
+    {{ content }}
+  </main> 
   <!-- end content -->
-
+  
   <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
   {% include footer.html %}
   {% include javascripts.html %}
 </body>
 
 </html>
-  
